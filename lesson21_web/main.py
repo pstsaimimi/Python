@@ -15,7 +15,7 @@ handler = WebhookHandler(os.environ['CHANNEL_SECRET'])
 @app.route("/<string:question>")
 def index(question:str=''):
     if question=='':
-        return "<h1>我是Gemini的小助手</h1>"
+        return "<h1>我是Gemini的小幫手</h1>"
     else:        
         response = client.models.generate_content(
             model="gemini-2.5-flash", contents=f"{question},回應請輸出成為html格式"
